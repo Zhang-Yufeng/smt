@@ -15,9 +15,6 @@ from Cython.Build import cythonize
 from smt import __version__
 
 
-if sys.platform == 'darwin':
-    os.environ['MACOSX_DEPLOYMENT_TARGET'] = '10.9'
-
 CLASSIFIERS = """\
 Development Status :: 5 - Production/Stable
 Intended Audience :: Science/Research
