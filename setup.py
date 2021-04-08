@@ -8,10 +8,15 @@ This package is distributed under New BSD license.
 """
 from setuptools import setup, Extension
 import sys
+import os
 import numpy as np
 from Cython.Build import cythonize
 
 from smt import __version__
+
+
+if sys.platform == 'darwin':
+    os.environ['MACOSX_DEPLOYMENT_TARGET'] = '10.9'
 
 CLASSIFIERS = """\
 Development Status :: 5 - Production/Stable
